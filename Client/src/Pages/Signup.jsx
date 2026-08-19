@@ -45,8 +45,8 @@ const Signup = () => {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-gray-100 to-slate-200 p-4 sm:p-6">
-      <div className="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="flex min-h-screen items-start justify-center bg-linear-to-br from-slate-100 via-gray-100 to-slate-200 px-4 py-6 sm:items-center sm:p-6">
+      <div className="mx-auto my-auto w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-xl">
         <div className="bg-blue-600 px-5 py-6 sm:px-8">
           <h1 className="text-2xl font-bold text-white sm:text-3xl">Create Account</h1>
           <p className="text-blue-100 mt-1">
@@ -54,8 +54,8 @@ const Signup = () => {
           </p>
         </div>
 
-        <div className="p-5 sm:p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="p-4 sm:p-8">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
             {/* First Name */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">

@@ -36,8 +36,8 @@ const Login = () => {
     }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-gray-100 to-slate-200 p-4 sm:p-6">
-      <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-gray-100 to-slate-200 px-4 py-6 sm:p-6">
+      <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-xl">
         {/* Header */}
         <div className="bg-blue-600 px-5 py-6 sm:px-8">
           <h1 className="text-2xl font-bold text-white sm:text-3xl">Welcome Back</h1>
@@ -47,7 +47,7 @@ const Login = () => {
         </div>
 
         {/* Form */}
-        <div className="space-y-6 p-5 sm:p-8">
+        <div className="space-y-5 p-4 sm:space-y-6 sm:p-8">
 
           {/* Email */}
           <div>
