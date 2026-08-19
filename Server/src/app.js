@@ -10,7 +10,7 @@ const cors = require("cors")
 
 
 app.use(cors({
-    origin : "http://localhost:5173",
+    origin : "https://task-manager-frontend-iogv.onrender.com",
     credentials : true
 }))
 
