@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-100 via-gray-100 to-slate-200">
       <div className="flex min-h-screen items-center justify-center px-4 py-6 sm:p-6">
-      <div className="mx-auto w-full max-w-md -translate-y-8 overflow-hidden rounded-2xl bg-white shadow-xl sm:-translate-y-10">
+      <div className="mx-auto w-full max-w-md -translate-y-4 overflow-hidden rounded-2xl bg-white shadow-xl sm:translate-y-0">
         {/* Header */}
         <div className="bg-blue-600 px-5 py-6 sm:px-8">
           <h1 className="text-2xl font-bold text-white sm:text-3xl">Welcome Back</h1>
