@@ -15,8 +15,8 @@ const NewTask = () => {
     
     <Navbar />
 
-    <div className="min-h-[calc(100vh-4rem)] bg-gray-100 flex items-center justify-center p-6">
-      <div className="w-full max-w-lg bg-white rounded-2xl shadow-lg p-8">
+    <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-gray-100 p-4 sm:p-6">
+      <div className="w-full max-w-lg rounded-2xl bg-white p-5 shadow-lg sm:p-8">
         
         <h2 className="text-2xl font-bold text-gray-800 mb-6">
           Create New Task

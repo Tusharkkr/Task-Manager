@@ -20,7 +20,7 @@ const Edittask = () => {
 
       <div className="flex justify-center items-center min-h-[calc(100vh-64px)] px-6 py-10">
 
-        <div className="w-full max-w-lg bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+        <div className="w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-5 shadow-lg sm:p-8">
 
           <div className="mb-7">
             <h2 className="text-2xl font-bold text-gray-800">
@@ -186,7 +186,7 @@ const Edittask = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex gap-3 pt-3">
+            <div className="flex flex-col gap-3 pt-3 sm:flex-row">
 
               <button
                 onClick={() => {
@@ -194,7 +194,7 @@ const Edittask = () => {
                 }}
                 type="button"
                 className="
-                  flex-1
+                  w-full flex-1
                   py-3
                   rounded-xl
                   border border-gray-300
@@ -223,7 +223,7 @@ const Edittask = () => {
                 }}
                 type="button"
                 className="
-                  flex-1
+                  w-full flex-1
                   py-3
                   rounded-xl
                   bg-blue-600

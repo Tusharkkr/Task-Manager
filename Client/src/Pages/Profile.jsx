@@ -27,7 +27,7 @@ const Profile = () => {
 
       <Navbar />
 
-      <div className="flex justify-center px-6 py-12">
+      <div className="flex justify-center px-4 py-6 sm:px-6 sm:py-12">
 
         <div className="w-full max-w-2xl">
 
@@ -38,7 +38,7 @@ const Profile = () => {
             <div className="h-32 bg-linear-to-r from-blue-600 to-indigo-600" />
 
             {/* Profile Info */}
-            <div className="px-8 pb-8">
+            <div className="px-5 pb-8 sm:px-8">
 
               {/* Avatar */}
               <div className="-mt-16 mb-5">
@@ -118,7 +118,7 @@ const Profile = () => {
               <div className="flex items-start justify-between">
 
                 <div>
-                  <h1 className="text-2xl font-bold text-gray-800">
+                  <h1 className="break-words text-xl font-bold text-gray-800 sm:text-2xl">
                     {firstName} {lastName}
                   </h1>
 
@@ -161,7 +161,7 @@ const Profile = () => {
                       Username
                     </p>
 
-                    <p className="font-medium text-gray-800 mt-1">
+                    <p className="mt-1 break-words font-medium text-gray-800">
                       @{username}
                     </p>
                   </div>
@@ -171,7 +171,7 @@ const Profile = () => {
                       Name
                     </p>
 
-                    <p className="font-medium text-gray-800 mt-1">
+                    <p className="mt-1 break-words font-medium text-gray-800">
                       {firstName} {lastName}
                     </p>
                   </div>

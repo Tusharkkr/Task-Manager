@@ -87,7 +87,7 @@ const Home = () => {
               hover:text-blue-600
               hover:bg-blue-50
               transition-all duration-200
-              opacity-0 group-hover:opacity-100
+              opacity-100 md:opacity-0 md:group-hover:opacity-100
             "
             title="Edit task"
           >
@@ -113,7 +113,7 @@ const Home = () => {
             {item.priority}
           </span>
 
-          <span className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span className="text-xs text-gray-400 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
             Drag to move
           </span>
 
@@ -128,14 +128,14 @@ const Home = () => {
 
       <Navbar />
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-12">
 
         {/* Header Section */}
         <div className="mb-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
             Task Manager
           </h1>
-          <p className="text-gray-600 text-lg">Organize and track your tasks efficiently</p>
+          <p className="px-2 text-gray-600 text-base sm:text-lg">Organize and track your tasks efficiently</p>
           <div className="h-1 w-20 bg-linear-to-r from-blue-600 to-purple-600 mx-auto mt-4 rounded-full"></div>
         </div>
 
@@ -206,7 +206,7 @@ const Home = () => {
               className="
               p-5
               space-y-4
-              h-[65vh]
+              h-[52vh] min-h-64 md:h-[65vh]
               overflow-y-auto
               flex-1
               bg-linear-to-b from-white to-gray-50
@@ -314,7 +314,7 @@ const Home = () => {
               className="
               p-5
               space-y-4
-              h-[65vh]
+              h-[52vh] min-h-64 md:h-[65vh]
               overflow-y-auto
               flex-1
               bg-linear-to-b from-white to-gray-50
@@ -418,7 +418,7 @@ const Home = () => {
               className="
               p-5
               space-y-4
-              h-[65vh]
+              h-[52vh] min-h-64 md:h-[65vh]
               overflow-y-auto
               flex-1
               bg-linear-to-b from-white to-gray-50

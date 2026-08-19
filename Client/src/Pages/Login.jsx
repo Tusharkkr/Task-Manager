@@ -36,18 +36,18 @@ const Login = () => {
     }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-100 via-gray-100 to-slate-200 flex items-center justify-center p-6">
+    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-gray-100 to-slate-200 p-4 sm:p-6">
       <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Header */}
-        <div className="bg-blue-600 px-8 py-6">
-          <h1 className="text-3xl font-bold text-white">Welcome Back</h1>
+        <div className="bg-blue-600 px-5 py-6 sm:px-8">
+          <h1 className="text-2xl font-bold text-white sm:text-3xl">Welcome Back</h1>
           <p className="text-blue-100 mt-1">
             Login to continue to your account.
           </p>
         </div>
 
         {/* Form */}
-        <div className="p-8 space-y-6">
+        <div className="space-y-6 p-5 sm:p-8">
 
           {/* Email */}
           <div>
