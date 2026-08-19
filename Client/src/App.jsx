@@ -1,4 +1,4 @@
-import { Route, Routes} from "react-router-dom"
+import { Route, Routes, useLocation} from "react-router-dom"
 import Signup from "./Pages/Signup"
 import Login from "./Pages/Login"
 import Home from "./Pages/Home"
@@ -11,6 +11,9 @@ import Profile from "./Pages/Profile"
 import Footer from "./Components/Footer"
 
 const App = () => {
+  const location = useLocation()
+  const isAuthPage = location.pathname === "/login" || location.pathname === "/signup"
+
   return (
     <UserContextProvider>
 
@@ -35,7 +38,7 @@ const App = () => {
 
       </Routes>
 
-      <Footer />
+      {!isAuthPage && <Footer />}
 
     </div>
     </UserContextProvider>
