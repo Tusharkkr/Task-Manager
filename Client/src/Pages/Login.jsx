@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-100 via-gray-100 to-slate-200">
       <Navbar simple />
-      <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-6 sm:p-6">
+      <div className="flex min-h-[calc(100vh-4rem)] items-start justify-center px-4 pt-3 pb-6 sm:items-center sm:p-6">
       <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-xl">
         {/* Header */}
         <div className="bg-blue-600 px-5 py-6 sm:px-8">
