@@ -99,10 +99,11 @@ router.post("/login", async(req, res) => { // data => username / email + pw
         // })
 
         res.status(200).cookie("token", token, {
-            secure : false,
+            secure : process.env.NODE_ENV === "production",
             httpOnly : true,
             sameSite : "none",
-            maxAge : 48 * 60 * 60 * 1000
+            maxAge : 48 * 60 * 60 * 1000,
+            path : "/"
         }).json({
             msg : "User logged in"
         })
@@ -123,7 +124,12 @@ router.post("/login", async(req, res) => { // data => username / email + pw
 
 
 router.post("/logout", (req, res) => {
-    res.cookie("token", null).json({
+    res.clearCookie("token", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "none",
+        path: "/"
+    }).json({
         msg : "User logged Out"
     })
 })

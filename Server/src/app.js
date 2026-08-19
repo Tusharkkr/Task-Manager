@@ -9,9 +9,20 @@ const { TaskRouter } = require("./Routes/Task.routes")
 const cors = require("cors")
 
 
+const allowedOrigins = (process.env.CLIENT_URL || "https://task-manager-frontend-iogv.onrender.com")
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean)
+
 app.use(cors({
-    origin : "https://task-manager-frontend-iogv.onrender.com",
-    credentials : true
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            return callback(null, true)
+        }
+
+        return callback(new Error("Origin is not allowed by CORS"))
+    },
+    credentials: true
 }))
 
 app.use(express.json()) // body is undefined, this will parse it

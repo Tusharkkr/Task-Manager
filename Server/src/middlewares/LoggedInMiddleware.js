@@ -5,9 +5,13 @@ const{ User } = require("../Models/User.schema")
 
 const isLoggedIn = async (req, res, next) => {
     try {
-        const { token } = req.cookies
+        const token = req.cookies?.token
 
-        const obj = jwt.decode(token, process.env.JWT_SECRET) // _id
+        if (!token) {
+            throw new Error("Please log in...")
+        }
+
+        const obj = jwt.verify(token, process.env.JWT_SECRET) // _id
         // console.log(obj)
 
         if(!obj)
