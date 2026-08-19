@@ -101,7 +101,7 @@ router.post("/login", async(req, res) => { // data => username / email + pw
         res.status(200).cookie("token", token, {
             secure : false,
             httpOnly : true,
-            sameSite : "lax",
+            sameSite : "none",
             maxAge : 48 * 60 * 60 * 1000
         }).json({
             msg : "User logged in"
