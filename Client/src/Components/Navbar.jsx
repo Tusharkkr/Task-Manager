@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ simple = false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -16,8 +16,7 @@ const Navbar = () => {
           </h3>
         </Link>
 
-        {/* Navigation Links */}
-        <button
+        {!simple && <button
           type="button"
           onClick={() => setIsMenuOpen((open) => !open)}
           className="md:hidden rounded-lg p-2 text-2xl leading-none text-gray-700 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -25,9 +24,9 @@ const Navbar = () => {
           aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? "×" : "☰"}
-        </button>
+        </button>}
 
-        <div className={`${isMenuOpen ? "flex" : "hidden"} basis-full flex-col gap-2 border-t border-blue-100 py-3 text-gray-700 font-medium md:flex md:basis-auto md:flex-row md:items-center md:gap-6 md:border-0 md:py-0`}>
+        {!simple && <div className={`${isMenuOpen ? "flex" : "hidden"} basis-full flex-col gap-2 border-t border-blue-100 py-3 text-gray-700 font-medium md:flex md:basis-auto md:flex-row md:items-center md:gap-6 md:border-0 md:py-0`}>
           <Link
             to="/"
             onClick={closeMenu}
@@ -51,7 +50,7 @@ const Navbar = () => {
           >
             Profile
           </Link>
-        </div>
+        </div>}
       </div>
     </nav>
   );
